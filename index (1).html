@@ -111,7 +111,7 @@ function finish(){$('quizContent').hidden=true;$('quizEnd').hidden=false;let e=$
 $('startQuiz').addEventListener('click',start);$('restartQuiz').addEventListener('click',start);$('nextQuiz').addEventListener('click',()=>{if(!answered)return;if(idx+1===questions.length)finish();else{idx++;render();$('qtext').scrollIntoView({block:'center',behavior:'smooth'});}});
 function progress(){let h=document.documentElement.scrollHeight-innerHeight;$('readline').style.width=(h>0?Math.max(0,Math.min(100,scrollY/h*100)):0)+'%';}addEventListener('scroll',progress,{passive:true});addEventListener('resize',progress);progress();
 // Set this to the HTTPS URL of your deployed Worker. Leave blank for built-in help.
-const TUTOR_API_URL = '';
+const TUTOR_API_URL = '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';
 const chat=$('studychat'), messages=$('chatmessages'), question=$('chatQuestion');
 let selected={title:'Getting started',line:'',section:'reference',lesson:''}, selectedEl=null, pinned=false, history=[], accessCode='', waiting=false;
 const help={
